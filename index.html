@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasmine info media</title>
-    <link rel="stylesheet" href="./asssets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./asssets/css/navbar.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,7 +16,11 @@
     <nav class="fixed-top">
         <header class="py-3 m-0 head-first w-100">
             <div class="d-flex align-content-center justify-content-around">
-                <div class=" text-white logo-container mx-3">
+                <button id="navbar-toggle-btn" class="toggle-close" type="button">
+                    <img src="./media/navicon.png" class="nabbar-icon" alt="" srcset="">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                </button>
+                <div class=" text-white logo-container mx-3 d-sm-none d-md-block">
                     <p class="logo text-uppercase">rtbf
                         <span class="ms-1 p-1 text-center rounded-circle logo-text ">
                             .be
@@ -32,17 +36,17 @@
                 </ul>
 
                 <ul class="nav nav-pills flex justify-content-center align-items-center flex-wrap nav-first">
-                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">Inscription</a></li>
+                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">
+                        <img src="./media/meteo.png" class="nabbar-icon" alt="" srcset="">
+                    </a></li>
+                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">
+                        <img src="./media/user.png" class="nabbar-icon" alt="" srcset="">
+                    </a></li>
                 </ul>
             </div>
 
             <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Tenth navbar example">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
                     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
                         <ul class="navbar-nav navsecond">
@@ -83,6 +87,11 @@
                     </div>
 
                 </div>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
             </nav>
         </header>
@@ -97,19 +106,19 @@
                     <p class=" mx-1 px-1 text-center text-uppercase text-white">Belgique</p>
                 </a>
                 <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Europe</p>
+                    <p class=" mx-1 px-1 text-center text-uppercase text-white">EUROPE</p>
                 </a>
                 <a class="nav-link" href="#">
                     <p class=" mx-1 px-1 text-center text-uppercase text-white">MONDE</p>
                 </a>
                 <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Economie</p>
+                    <p class=" mx-1 px-1 text-center text-uppercase text-white">ECONOMIE</p>
                 </a>
                 <a class="nav-link" href="#">
                     <p class=" mx-1 px-1 text-center text-uppercase text-white">POLITIQUE</p>
                 </a>
                 <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Justise</p>
+                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Justice</p>
                 </a>
                 <a class="nav-link" href="#">
                     <p class=" mx-1 px-1 text-center text-uppercase text-white">Faky</p>
@@ -118,6 +127,30 @@
             </div>
         </header>
     </nav>
+
+
+
+
+    <div class="bg-dark text-white  sidebar-container" id="sidebar">
+        <div class="sidebar-btn-container">
+            <button class="toggle-close" id="close-btn">
+                <img src="./media/cross.png" class="nabbar-icon" alt="" srcset="">
+            </button>
+        </div>
+        <p class="py-3  text-uppercase weight sidebar-heading">
+            A la UNE
+        </p>
+        <ul class="navbar-nav  w-100 sidebar-list-container">
+            <li class="nav-item">list one </li>
+            <li>list two </li>
+            <li>list three </li>
+            <li>list four </li>
+        </ul>
+    </div>
+
+
+
+
 
     <main class="container-fluid px-5 pt-2 body">
         <div class="row">
@@ -137,7 +170,7 @@
                         Le fil d'info
                     </p>
                     <p class="rounded-pill mx-1 px-3 text-center text-capitalize circle-text">
-                        Decrpte</p>
+                        Decrypte</p>
                 </div>
             </div>
         </div>
@@ -162,22 +195,21 @@
                         <img class="w-100" src="./media/2.jpg" alt="" srcset="">
                         <div class="text-mute align-self-start headings">POLICE</div>
                         <p class="article-paragraph align-self-start article">
-                            <a href="./article.html">
-                                La descente de la Lesse dégénère: neuf policiers ivres envoyés
-                                à l’hôpital après une bagarre générale avec des ados
-                            </a>
+
+                            La descente de la Lesse dégénère: neuf policiers ivres envoyés
+                            à l’hôpital après une bagarre générale avec des ados
+
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-6 col-12 ">
                     <div class="d-flex flex-column align-items-center justify-content-between">
                         <img class="w-100" src="./media/3.jpg" alt="" srcset="">
-                        <div class="text-mute align-self-start headings">Politique</div>
+                        <div class="text-mute align-self-start headings">POLITIQUE</div>
                         <p class="article-paragraph align-self-start article">
-                            <a href="./article.html">
-                                La Russie a perdu plus de 2000 chars d'assaut, preuves visuelles à l'appui
-                                Comptabiliser les pertes de guerre
-                            </a>
+                            La Russie a perdu plus de 2000 chars d'assaut, preuves visuelles à l'appui
+                            Comptabiliser les pertes de guerre
+
                         </p>
                     </div>
                 </div>
@@ -187,60 +219,71 @@
         <div class="row mt-2">
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="w-100" src="./media/7.jpg" alt="" srcset="">
+                    <img class="w-100 img-article" src="./media/7.jpg" alt="" srcset="">
                     <div class="text-mute align-self-start headings">DÉFENSE</div>
                     <p class="article-paragraph align-self-start article">
-                        <a href="./article.html">
-                            Les attaques de drones de la Russie très peu efficaces,
-                            selon la Défense du Royaume-Uni
-                        </a>
+
+                        Les attaques de drones de la Russie très peu efficaces,
+                        selon la Défense du Royaume-Uni
+
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="w-100" src="./media/4.jpg" alt="" srcset="">
+                    <img class="w-100 img-article" src="./media/4.jpg" alt="" srcset="">
                     <div class="text-mute align-self-start headings">POLICE FRANCE</div>
                     <p class="article-paragraph align-self-start article">
-                        <a href="./article.html">
-                            Trois policiers de la Brav-M en France renvoyés en conseil de discipline
-                        </a>
+                        Trois policiers de la Brav-M en France renvoyés en conseil de discipline
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="w-100" src="./media/5.jpg" alt="" srcset="">
+                    <img class="w-100 img-article" src="./media/5.jpg" alt="" srcset="">
                     <div class="text-mute align-self-start headings">BELGIQUE</div>
                     <p class="article-paragraph align-self-start article">
-                        <a href="./article.html">
+                        Rixe entre police et manifestants en Allemagne
 
-                            Rixe entre police et manifestants en Allemagne
-                        </a>
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="w-100" src="./media/9.jpg" alt="" srcset="">
-                    <div class="text-mute align-self-start headings">DROGU</div>
+                    <img class="w-100 img-article" src="./media/9.jpg" alt="" srcset="">
+                    <div class="text-mute align-self-start headings">DROGUE</div>
                     <p class="article-paragraph align-self-start article">
-                        <a href="./article.html">
-
-                            Vaste opération policière liée au trafic de stupéfiants: huit
-                            personnes interpellées sur le sol belge
-                        </a>
+                        Vaste opération policière liée au trafic de stupéfiants: huit
+                        personnes interpellées sur le sol belge
                     </p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="d-flex flex-column align-items-center justify-content-between">
-                    <img class="w-100" src="./media/8.jpg" alt="" srcset="">
+                    <img class="w-100 img-article" src="./media/8.jpg" alt="" srcset="">
                     <div class="text-mute align-self-start headings">PRISON</div>
                     <p class="article-paragraph align-self-start article">
-                        <a href="./article.html">Après 50 jours en prison en Algérie 
-                            dans des conditions "inhumaines", un Belge est libéré: un second combat commence pour lui
-                        </a>
+                        Après 50 jours en prison en Algérie
+                        dans des conditions "inhumaines", un Belge est libéré: un second combat commence pour lui
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="d-flex flex-column align-items-center justify-content-between">
+                    <img class="w-100 img-article" src="./media/6.jpg" alt="" srcset="">
+                    <div class="text-mute align-self-start headings">RUSSIE</div>
+                    <p class="article-paragraph align-self-start article">
+                        La Russie a entamé des exercices militaires en mer Baltique
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="d-flex flex-column align-items-center justify-content-between">
+                    <img class="w-100 img-article" src="./media/10.jpg" alt="" srcset="">
+                    <div class="text-mute align-self-start headings">ADOS</div>
+                    <p class="article-paragraph align-self-start article">
+                        La descente de la Lesse dégénère: neuf policiers ivres envoyés à l’hôpital
+                        après une bagarre générale avec des ados
                     </p>
                 </div>
             </div>
@@ -261,13 +304,34 @@
 
 
             <ul class="nav flex-column footer-links">
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">
+                        ISFCE
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">Tel: 464-509-678</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">
+                        Rue Joseph Buedts 14, 1040 Etterbeek
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="#" class="nav-link p-0 text-body-secondary">
+                        client@Support.be
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav flex-column footer-links">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Trending</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New</a></li>
             </ul>
 
             <ul class="nav flex-column footer-links">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Economie</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Politique</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">POLITIQUE</a></li>
             </ul>
 
             <ul class="nav flex-column footer-links">
@@ -284,8 +348,7 @@
                 </li>
                 <li class="ms-3">
                     <a class="text-body-secondary" href="#">
-                        <i class="fa fa-shopping-cart"></i>
-                        <i class="fa fa-facebook-square"></i>
+                        <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li class="ms-3">
@@ -302,7 +365,8 @@
         </footer>
     </div>
 
-    <script src="./asssets/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/js/main.js"></script>
 </body>
 
 </html>

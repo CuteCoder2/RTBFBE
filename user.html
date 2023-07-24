@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasmine info media</title>
-    <link rel="stylesheet" href="./asssets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./asssets/css/navbar.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,7 +17,11 @@
     <nav class="fixed-top">
         <header class="py-3 m-0 head-first w-100">
             <div class="d-flex align-content-center justify-content-around">
-                <div class=" text-white logo-container mx-3">
+                <button id="navbar-toggle-btn" class="toggle-close" type="button">
+                    <img src="./media/navicon.png" class="nabbar-icon" alt="" srcset="">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                </button>
+                <div class=" text-white logo-container mx-3 d-sm-none d-md-block">
                     <p class="logo text-uppercase">rtbf
                         <span class="ms-1 p-1 text-center rounded-circle logo-text ">
                             .be
@@ -33,17 +37,17 @@
                 </ul>
 
                 <ul class="nav nav-pills flex justify-content-center align-items-center flex-wrap nav-first">
-                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">Inscription</a></li>
+                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">
+                        <img src="./media/meteo.png" class="nabbar-icon" alt="" srcset="">
+                    </a></li>
+                    <li class="nav-item"><a href="./user.html" class="nav-link text-uppercase">
+                        <img src="./media/user.png" class="nabbar-icon" alt="" srcset="">
+                    </a></li>
                 </ul>
             </div>
 
             <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Tenth navbar example">
                 <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
 
                     <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
                         <ul class="navbar-nav navsecond">
@@ -84,45 +88,43 @@
                     </div>
 
                 </div>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
             </nav>
         </header>
 
-        <header class="header-second w-100">
-            <div class="heading text-white d-flex align-items-center justify-content-center  flex-wrap p-0 m-0">
-                <p class="me-5 my-2 p-3 info align-self-stretch text-uppercase">Info </p>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Regions</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Belgique</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Europe</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">MONDE</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Economie</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">POLITIQUE</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Justise</p>
-                </a>
-                <a class="nav-link" href="#">
-                    <p class=" mx-1 px-1 text-center text-uppercase text-white">Faky</p>
-                </a>
-                </a>
-            </div>
-        </header>
+
     </nav>
 
 
 
-    <main class="container-fluid px-5 pt-2 body">
+
+    <div class="bg-dark text-white  sidebar-container" id="sidebar">
+        <div class="sidebar-btn-container">
+            <button class="toggle-close" id="close-btn">
+                <img src="./media/cross.png" class="nabbar-icon" alt="" srcset="">
+            </button>
+        </div>
+        <p class="py-3  text-uppercase weight sidebar-heading">
+            A la UNE
+        </p>
+        <ul class="navbar-nav  w-100 sidebar-list-container">
+            <li class="nav-item">list one </li>
+            <li>list two </li>
+            <li>list three </li>
+            <li>list four </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <main class="container-fluid px-5 pt-2 body2">
 
         <div class="row mt-2 d-flex justify-content-center align-items-center">
             <div class="col-6">
@@ -220,7 +222,7 @@
                 </li>
                 <li class="nav-item mb-2">
                     <a href="#" class="nav-link p-0 text-body-secondary">
-                        Rue Joseph Buedts 14, 1040 Etterbeeek
+                        Rue Joseph Buedts 14, 1040 Etterbeek
                     </a>
                 </li>
                 <li class="nav-item mb-2">
@@ -254,8 +256,7 @@
                 </li>
                 <li class="ms-3">
                     <a class="text-body-secondary" href="#">
-                        <i class="fa fa-shopping-cart"></i>
-                        <i class="fa fa-facebook-square"></i>
+                        <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li class="ms-3">
@@ -272,7 +273,8 @@
         </footer>
     </div>
 
-    <script src="./asssets/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/js/main.js"></script>
 </body>
 
 </html>
